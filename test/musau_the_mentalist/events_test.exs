@@ -8,7 +8,14 @@ defmodule MusauTheMentalist.EventsTest do
 
     import MusauTheMentalist.EventsFixtures
 
-    @invalid_attrs %{date: nil, description: nil, title: nil, image: nil, time_of_starting: nil, time_of_ending: nil}
+    @invalid_attrs %{
+      date: nil,
+      description: nil,
+      title: nil,
+      image: nil,
+      time_of_starting: nil,
+      time_of_ending: nil
+    }
 
     test "list_events/0 returns all events" do
       event = event_fixture()
@@ -21,7 +28,14 @@ defmodule MusauTheMentalist.EventsTest do
     end
 
     test "create_event/1 with valid data creates a event" do
-      valid_attrs = %{date: "some date", description: "some description", title: "some title", image: "some image", time_of_starting: "some time_of_starting", time_of_ending: "some time_of_ending"}
+      valid_attrs = %{
+        date: "some date",
+        description: "some description",
+        title: "some title",
+        image: "some image",
+        time_of_starting: "some time_of_starting",
+        time_of_ending: "some time_of_ending"
+      }
 
       assert {:ok, %Event{} = event} = Events.create_event(valid_attrs)
       assert event.date == "some date"
@@ -38,7 +52,15 @@ defmodule MusauTheMentalist.EventsTest do
 
     test "update_event/2 with valid data updates the event" do
       event = event_fixture()
-      update_attrs = %{date: "some updated date", description: "some updated description", title: "some updated title", image: "some updated image", time_of_starting: "some updated time_of_starting", time_of_ending: "some updated time_of_ending"}
+
+      update_attrs = %{
+        date: "some updated date",
+        description: "some updated description",
+        title: "some updated title",
+        image: "some updated image",
+        time_of_starting: "some updated time_of_starting",
+        time_of_ending: "some updated time_of_ending"
+      }
 
       assert {:ok, %Event{} = event} = Events.update_event(event, update_attrs)
       assert event.date == "some updated date"

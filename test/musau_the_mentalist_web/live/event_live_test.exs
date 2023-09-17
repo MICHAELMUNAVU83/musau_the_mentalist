@@ -4,9 +4,30 @@ defmodule MusauTheMentalistWeb.EventLiveTest do
   import Phoenix.LiveViewTest
   import MusauTheMentalist.EventsFixtures
 
-  @create_attrs %{date: "some date", description: "some description", title: "some title", image: "some image", time_of_starting: "some time_of_starting", time_of_ending: "some time_of_ending"}
-  @update_attrs %{date: "some updated date", description: "some updated description", title: "some updated title", image: "some updated image", time_of_starting: "some updated time_of_starting", time_of_ending: "some updated time_of_ending"}
-  @invalid_attrs %{date: nil, description: nil, title: nil, image: nil, time_of_starting: nil, time_of_ending: nil}
+  @create_attrs %{
+    date: "some date",
+    description: "some description",
+    title: "some title",
+    image: "some image",
+    time_of_starting: "some time_of_starting",
+    time_of_ending: "some time_of_ending"
+  }
+  @update_attrs %{
+    date: "some updated date",
+    description: "some updated description",
+    title: "some updated title",
+    image: "some updated image",
+    time_of_starting: "some updated time_of_starting",
+    time_of_ending: "some updated time_of_ending"
+  }
+  @invalid_attrs %{
+    date: nil,
+    description: nil,
+    title: nil,
+    image: nil,
+    time_of_starting: nil,
+    time_of_ending: nil
+  }
 
   defp create_event(_) do
     event = event_fixture()

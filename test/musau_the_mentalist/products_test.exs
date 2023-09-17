@@ -21,7 +21,12 @@ defmodule MusauTheMentalist.ProductsTest do
     end
 
     test "create_product/1 with valid data creates a product" do
-      valid_attrs = %{name: "some name", description: "some description", images: "some images", price: "some price"}
+      valid_attrs = %{
+        name: "some name",
+        description: "some description",
+        images: "some images",
+        price: "some price"
+      }
 
       assert {:ok, %Product{} = product} = Products.create_product(valid_attrs)
       assert product.name == "some name"
@@ -36,7 +41,13 @@ defmodule MusauTheMentalist.ProductsTest do
 
     test "update_product/2 with valid data updates the product" do
       product = product_fixture()
-      update_attrs = %{name: "some updated name", description: "some updated description", images: "some updated images", price: "some updated price"}
+
+      update_attrs = %{
+        name: "some updated name",
+        description: "some updated description",
+        images: "some updated images",
+        price: "some updated price"
+      }
 
       assert {:ok, %Product{} = product} = Products.update_product(product, update_attrs)
       assert product.name == "some updated name"

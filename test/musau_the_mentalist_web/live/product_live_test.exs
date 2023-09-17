@@ -4,8 +4,18 @@ defmodule MusauTheMentalistWeb.ProductLiveTest do
   import Phoenix.LiveViewTest
   import MusauTheMentalist.ProductsFixtures
 
-  @create_attrs %{name: "some name", description: "some description", images: "some images", price: "some price"}
-  @update_attrs %{name: "some updated name", description: "some updated description", images: "some updated images", price: "some updated price"}
+  @create_attrs %{
+    name: "some name",
+    description: "some description",
+    images: "some images",
+    price: "some price"
+  }
+  @update_attrs %{
+    name: "some updated name",
+    description: "some updated description",
+    images: "some updated images",
+    price: "some updated price"
+  }
   @invalid_attrs %{name: nil, description: nil, images: nil, price: nil}
 
   defp create_product(_) do

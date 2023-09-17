@@ -7,34 +7,34 @@
     id="event-form"
     phx-target={@myself}
     phx-change="validate"
-    phx-submit="save">
-  
-    <%= label f, :title %>
-    <%= text_input f, :title %>
-    <%= error_tag f, :title %>
-  
-    <%= label f, :description %>
-    <%= text_input f, :description %>
-    <%= error_tag f, :description %>
-  
-    <%= label f, :date %>
-    <%= text_input f, :date %>
-    <%= error_tag f, :date %>
-  
-    <%= label f, :time_of_starting %>
-    <%= text_input f, :time_of_starting %>
-    <%= error_tag f, :time_of_starting %>
-  
-    <%= label f, :time_of_ending %>
-    <%= text_input f, :time_of_ending %>
-    <%= error_tag f, :time_of_ending %>
-  
-    <%= label f, :image %>
-    <%= text_input f, :image %>
-    <%= error_tag f, :image %>
-  
+    phx-submit="save"
+  >
+    <%= label(f, :title) %>
+    <%= text_input(f, :title) %>
+    <%= error_tag(f, :title) %>
+
+    <%= label(f, :description) %>
+    <%= text_input(f, :description) %>
+    <%= error_tag(f, :description) %>
+
+    <%= label(f, :date) %>
+    <%= text_input(f, :date) %>
+    <%= error_tag(f, :date) %>
+
+    <%= label(f, :time_of_starting) %>
+    <%= text_input(f, :time_of_starting) %>
+    <%= error_tag(f, :time_of_starting) %>
+
+    <%= label(f, :time_of_ending) %>
+    <%= text_input(f, :time_of_ending) %>
+    <%= error_tag(f, :time_of_ending) %>
+
+    <%= label(f, :image) %>
+    <%= text_input(f, :image) %>
+    <%= error_tag(f, :image) %>
+
     <div>
-      <%= submit "Save", phx_disable_with: "Saving..." %>
+      <%= submit("Save", phx_disable_with: "Saving...") %>
     </div>
   </.form>
 </div>
