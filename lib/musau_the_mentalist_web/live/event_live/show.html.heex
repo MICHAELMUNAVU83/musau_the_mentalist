@@ -1,0 +1,51 @@
+<h1>Show Event</h1>
+
+<%= if @live_action in [:edit] do %>
+  <.modal return_to={Routes.event_show_path(@socket, :show, @event)}>
+    <.live_component
+      module={MusauTheMentalistWeb.EventLive.FormComponent}
+      id={@event.id}
+      title={@page_title}
+      action={@live_action}
+      event={@event}
+      return_to={Routes.event_show_path(@socket, :show, @event)}
+    />
+  </.modal>
+<% end %>
+
+<ul>
+
+  <li>
+    <strong>Title:</strong>
+    <%= @event.title %>
+  </li>
+
+  <li>
+    <strong>Description:</strong>
+    <%= @event.description %>
+  </li>
+
+  <li>
+    <strong>Date:</strong>
+    <%= @event.date %>
+  </li>
+
+  <li>
+    <strong>Time of starting:</strong>
+    <%= @event.time_of_starting %>
+  </li>
+
+  <li>
+    <strong>Time of ending:</strong>
+    <%= @event.time_of_ending %>
+  </li>
+
+  <li>
+    <strong>Image:</strong>
+    <%= @event.image %>
+  </li>
+
+</ul>
+
+<span><%= live_patch "Edit", to: Routes.event_show_path(@socket, :edit, @event), class: "button" %></span> |
+<span><%= live_redirect "Back", to: Routes.event_index_path(@socket, :index) %></span>

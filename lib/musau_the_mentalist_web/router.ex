@@ -28,6 +28,13 @@ defmodule MusauTheMentalistWeb.Router do
 
     live "/products/:id", ProductLive.Show, :show
     live "/products/:id/show/edit", ProductLive.Show, :edit
+
+    live "/events", EventLive.Index, :index
+    live "/events/new", EventLive.Index, :new
+    live "/events/:id/edit", EventLive.Index, :edit
+
+    live "/events/:id", EventLive.Show, :show
+    live "/events/:id/show/edit", EventLive.Show, :edit
   end
 
   # Other scopes may use custom stacks.
